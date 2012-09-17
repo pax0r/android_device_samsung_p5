@@ -21,10 +21,9 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- This device is not "voice capable"; it's data-only. -->
-    <bool name="config_voice_capable">true</bool>
+    <!-- This device allows sms service. -->
+    <bool name="config_sms_capable">true</bool>
 
-    <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">rmnet0</string>
 
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
@@ -62,12 +61,9 @@
     </string-array>
 
     <string-array translatable="false" name="config_tether_wifi_regexs">
-        <item>"eth0"</item>
+        <item>"wlan0"</item>
     </string-array>
 
-    <!-- Array of allowable ConnectivityManager network types for tethering -->
-    <!-- Common options are [1, 4] for wifi and dun or [0,1,5,7] for -->
-    <!-- mobile, wifi, hipri and bluetooth -->
     <integer-array translatable="false" name="config_tether_upstream_types">
         <item>0</item>
         <item>1</item>
