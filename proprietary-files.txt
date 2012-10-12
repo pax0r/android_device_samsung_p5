@@ -103,9 +103,12 @@ lib/lib_Samsung_Acoustic_Module_Llite.so
 lib/lib_Samsung_Resampler.so
 lib/libsamsungSoundbooster.so
 lib/lib_Samsung_Sound_Booster.so
-lib/libsecril-client.so
 lib/libsec-ril.so
+lib/libsecril-client.so
 lib/libstagefrighthw.so
+lib/libwvm.so
+lib/libWVStreamControlAPI_L3.so
+lib/libwvdrm_L3.so
 lib/omxplayer.so
 usr/share/alsa/alsa.conf
 usr/share/alsa/cards/aliases.conf

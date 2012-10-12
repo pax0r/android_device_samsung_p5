@@ -21,9 +21,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ril/cbd:root/sbin/cbd
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # The gps config appropriate for this device
@@ -36,12 +33,7 @@ $(call inherit-product-if-exists, vendor/samsung/p5/p5-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-PRODUCT_PACKAGES += \
-  Mms
-
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.telephony.ril_class=Smdk4210RIL
+$(call inherit-product, build/target/product/telephony.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := p5
