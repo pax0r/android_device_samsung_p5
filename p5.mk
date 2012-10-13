@@ -21,6 +21,10 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ril/cbd:root/sbin/cbd \
+    $(LOCAL_PATH)/apns/apns-conf.xml:system/etc/apns-conf.xml
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # The gps config appropriate for this device
@@ -35,6 +39,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 $(call inherit-product, build/target/product/telephony.mk)
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.telephony.ril_class=Smdk4210RIL
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := p5
 PRODUCT_DEVICE := p5
