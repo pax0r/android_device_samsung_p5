@@ -12,18 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/modules/dhd.ko:system/lib/modules/dhd.ko
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ril/cbd:root/sbin/cbd \
     $(LOCAL_PATH)/gps.xml:system/etc/gps.xml \
