@@ -22,10 +22,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/p5/BoardConfigVendor.mk
 
+TARGET_PREBUILT_KERNEL := device/samsung/p5/kernel
+
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 699744256
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 14080704512
 
 TARGET_OTA_ASSERT_DEVICE := p5,GT-P7300
-
-TARGET_KERNEL_SOURCE := kernel/samsung/p5
-TARGET_KERNEL_CONFIG := cyanogenmod_p5_defconfig
