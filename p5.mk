@@ -75,6 +75,9 @@ $(call inherit-product, build/target/product/telephony.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.telephony.ril_class=SamsungExynos4RIL
 
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
 # GPS config
 PRODUCT_PROPERTY_OVERRIDES += \
   my.gps=novzw

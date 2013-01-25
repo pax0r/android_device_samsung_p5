@@ -2,6 +2,7 @@ bin/gps.cer
 bin/gpsd
 bin/macloader
 bin/tegrastats
+bin/rild
 etc/audio/LVVEFS_Rx_Configuration.txt
 etc/audio/LVVEFS_Tx_Configuration.txt
 etc/audio/Rx_ControlParams_BLUETOOTH_HEADSET.txt
@@ -98,6 +99,7 @@ lib/libnvtvmr.so
 lib/libnvwinsys.so
 lib/libnvwsi.so
 lib/lib_Samsung_Resampler.so
+lib/libril.so
 lib/libsecril-client.so
 lib/libsec-ril.so
 lib/libstagefrighthw.so
